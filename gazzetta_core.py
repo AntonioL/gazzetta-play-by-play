@@ -1,6 +1,7 @@
 import time, math, requests, json
 
 BASE_URL = "http://xml2.temporeale.gazzettaobjects.it/trsport/tempo-reale/json"
+NON_STOPPING_STATES = ['LIVE', 'HALF-TIME', 'PRE-MATCH']
 
 #Get all the matches of today
 def get_today_matches():
@@ -18,8 +19,9 @@ def get_today_matches():
 				yield (event, competition)
 
 def matches_terminated(ids):
+	global NON_STOPPING_STATES
 	for (match, _) in get_today_matches():
-		if match['id'] in ids and match['status'] == 'LIVE': return False
+		if match['id'] in ids and match['status'] in NON_STOPPING_STATES: return False
 	return True
 
 class Gazzetta_PlayByPlay:
