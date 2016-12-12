@@ -26,7 +26,7 @@ if __name__ == '__main__':
 	notifier = m.Notifier()
 
 	for (event, competition) in get_today_matches():
-		#if event['status'] != 'LIVE': continue
+		if event['status'] != 'LIVE': continue
 		players = []
 		if event['teamHome']['name'] in teams_to_track: players += teams_to_track[event['teamHome']['name']]
 		if event['teamAway']['name'] in teams_to_track: players += teams_to_track[event['teamAway']['name']]
