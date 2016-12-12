@@ -6,8 +6,9 @@ The app automatically finds the current live matches and then it inspects them w
 of your interest.
 
 ##Instructions
+- Install the *requests* library through *pip install requests*
 - Run *python app.py*
-- Enter a separated list of players one by one in this format **PLAYER|TEAM** (ie. **Icardi|Inter**)
+- Enter a separated list of players one by one in this format **PLAYER|TEAM** (ie. *Icardi|Inter*)
 - To terminate the list enter an empty line
 - Enjoy
 
