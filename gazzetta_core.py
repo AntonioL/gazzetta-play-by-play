@@ -6,7 +6,7 @@ BASE_URL = "http://xml2.temporeale.gazzettaobjects.it/trsport/tempo-reale/json"
 def get_today_matches():
 	global BASE_URL
 	#1. Build the URL
-	url = "{}/{}/{}-events.json?_={}".format(BASE_URL, "calendario-eventi", time.strftime("%Y%m11"), math.floor(time.time()))
+	url = "{}/{}/{}-events.json?_={}".format(BASE_URL, "calendario-eventi", time.strftime("%Y%m%d"), math.floor(time.time()))
 	#2. Make the request
 	r = requests.get(url)
 	#3. The beautiful of it
