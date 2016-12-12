@@ -6,10 +6,10 @@ The app automatically finds the current live matches and then it inspects them w
 of your interest.
 
 ##Instructions
-1) Run *python app.py*
-2) Enter a separated list of players one by one in this format **PLAYER|TEAM** (ie. **Icardi|Inter**)
-3) To terminate the list enter an empty line
-4) Enjoy
+- Run *python app.py*
+- Enter a separated list of players one by one in this format **PLAYER|TEAM** (ie. **Icardi|Inter**)
+- To terminate the list enter an empty line
+- Enjoy
 
 ##Maintenance
 I do not plan to maintain this long-term so I encourage everyone to hack on the source code, there are some questions which I did not yet investigate.
